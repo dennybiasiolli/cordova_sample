@@ -1,0 +1,9 @@
+{
+  "name": "cordova_sample",
+  "version": "0.1.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "cordova": "^6.5.0"
+  }
+}
