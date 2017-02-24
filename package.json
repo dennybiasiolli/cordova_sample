@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "postinstall": "cordova prepare",
+    "start": "cordova run browser"
+  },
   "devDependencies": {
     "cordova": "^6.5.0"
   }
