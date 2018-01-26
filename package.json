@@ -29,5 +29,8 @@
       "ios",
       "browser"
     ]
+  },
+  "optionalDependencies": {
+    "ios-deploy": "^1.9.2"
   }
 }
