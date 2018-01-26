@@ -12,7 +12,8 @@
     "start-ios": "cordova run ios"
   },
   "devDependencies": {
-    "cordova": "^8.0.0"
+    "cordova": "^8.0.0",
+    "cordova-icon": "^0.11.0"
   },
   "dependencies": {
     "cordova-android": "^7.0.0",
