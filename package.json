@@ -6,6 +6,9 @@
   "scripts": {
     "build-android": "cordova build android",
     "build-ios": "cordova build ios",
+    "dist": "npm run dist-android && npm run dist-ios",
+    "dist-android": "cordova build android --release",
+    "dist-ios": "cordova build android --release && npm run open-xcode",
     "generate-cordova-icon": "cordova-icon --icon=icons/icon.png",
     "open-android-studio": "open -a /Applications/Android\\ Studio.app platforms/android/",
     "open-xcode": "open platforms/ios/HelloCordova.xcworkspace",
