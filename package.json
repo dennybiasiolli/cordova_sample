@@ -7,6 +7,8 @@
     "build-android": "cordova build android",
     "build-ios": "cordova build ios",
     "generate-cordova-icon": "cordova-icon --icon=icons/icon.png",
+    "open-android-studio": "open -a /Applications/Android\\ Studio.app platforms/android/",
+    "open-xcode": "open platforms/ios/HelloCordova.xcworkspace",
     "postinstall": "cordova prepare && npm run generate-cordova-icon",
     "start": "cordova run browser",
     "start-android": "cordova run android",
