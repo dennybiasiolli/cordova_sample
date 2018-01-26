@@ -6,7 +6,8 @@
   "scripts": {
     "build-android": "cordova build android",
     "build-ios": "cordova build ios",
-    "postinstall": "cordova prepare",
+    "generate-cordova-icon": "cordova-icon --icon=icons/icon.png",
+    "postinstall": "cordova prepare && npm run generate-cordova-icon",
     "start": "cordova run browser",
     "start-android": "cordova run android",
     "start-ios": "cordova run ios"
