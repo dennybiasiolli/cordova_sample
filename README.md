@@ -5,22 +5,22 @@ example on how to convert a simple website to a mobile cordova app
 
 - clone the repo
 
-- `npm install` or `yarn`
+- `npm install`
 
 #### Launch local web app
 
-- `npm start` or `yarn start`
+- `npm start`
 
 - open browser at [localhost:8000](http://localhost:8000)
 
 #### Build and launch cordova on android
 
-- `node_modules/.bin/cordova build android`
+- `npm run build-android`
 
-- `node_modules/.bin/cordova run android`
+- `npm run start-android`
 
 #### Launch cordova on ios
 
-- `node_modules/.bin/cordova build ios`
+- `npm run build-ios`
 
-- `node_modules/.bin/cordova run ios`
+- `npm run start-ios`
