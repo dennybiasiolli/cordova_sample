@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "main": "index.js",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dennybiasiolli/cordova_sample.git"
+  },
   "scripts": {
     "build-android": "cordova build android",
     "build-ios": "cordova build ios",
