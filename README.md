@@ -39,6 +39,10 @@ example on how to convert a simple website to a mobile cordova app
 
   launch it and download android-sdk with its internal tool
 
+- Accept all SDK package licenses
+
+  `$ANDROID_HOME/tools/bin/sdkmanager --license`
+
 - You need to install gradle
 
   `brew install gradle`
