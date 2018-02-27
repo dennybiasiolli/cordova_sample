@@ -2,21 +2,18 @@
 
 <head>
     <title>Pusher Test</title>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
     <script src="https://js.pusher.com/4.1/pusher.min.js"></script>
     <script>
-
-        // Enable pusher logging - don't include this in production
-        Pusher.logToConsole = true;
-
-        var PUSHER_KEY = '<pusher_key>';
-        var pusher = new Pusher(PUSHER_KEY, {
-            cluster: 'eu',
-            encrypted: true
-        });
-
-        var channel = pusher.subscribe('my-channel');
-        channel.bind('my-event', function (data) {
-            alert(data.message);
-        });
+        document.addEventListener('deviceready', () => {
+            window.FirebasePlugin.onNotificationOpen((notification) => {
+                console.log(notification);
+                alert(notification.title + '\n' + notification.body)
+            }, (error) => {
+                console.error(error);
+            });
+        }, false);
     </script>
 </head>

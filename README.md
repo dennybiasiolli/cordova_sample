@@ -164,3 +164,8 @@ example on how to convert a simple website to a mobile cordova app
 #### compile without killing the CPU
 
 `nice -n12 npm run dist`
+
+
+## Configure notifications
+
+See [NOTIFICATIONS.md](NOTIFICATIONS.md)
