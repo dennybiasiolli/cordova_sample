@@ -41,3 +41,37 @@ curl -H "Content-Type: application/json" \
       }
      }'
 ```
+
+or you can send a notification directly through Firebase
+
+```bash
+curl -X POST --header "Authorization: key=<Server key>" \
+    --Header "Content-Type: application/json" \
+    https://fcm.googleapis.com/fcm/send \
+    -d '{
+      "to": "/topics/ciao001",
+      "notification": {
+        "title": "Hello",
+        "body": "Hello, world!"
+      },
+      "data": {
+        "title": "Hello data",
+        "body": "Hello, data world!",
+        "action": "test 123"
+      }
+    }'
+
+# or with data-only
+
+curl -X POST --header "Authorization: key=<Server key>" \
+    --Header "Content-Type: application/json" \
+    https://fcm.googleapis.com/fcm/send \
+    -d '{
+      "to": "/topics/ciao001",
+      "data": {
+        "title": "Hello data",
+        "body": "Hello, data world!",
+        "action": "test 123"
+      }
+    }'
+```

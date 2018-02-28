@@ -8,6 +8,7 @@
     <script src="https://js.pusher.com/4.1/pusher.min.js"></script>
     <script>
         document.addEventListener('deviceready', () => {
+            window.FirebasePlugin.subscribe('ciao001', console.log, console.error)
             window.FirebasePlugin.onNotificationOpen((notification) => {
                 console.log(notification);
                 alert(notification.title + '\n' + notification.body)
