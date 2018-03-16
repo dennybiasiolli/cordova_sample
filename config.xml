@@ -29,6 +29,7 @@
         <variable name="ANDROID_HOST" value="app.mycoolapp.com" />
         <variable name="ANDROID_PATHPREFIX" value="/" />
     </plugin>
+    <plugin name="cordova-plugin-local-notification" spec="^0.9.0-beta.2" />
     <engine name="android" spec="^7.0.0" />
     <engine name="ios" spec="^4.5.4" />
     <engine name="browser" spec="^5.0.3" />
