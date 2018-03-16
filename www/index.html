@@ -1,1 +1,59 @@
-hello word!
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script src="https://js.pusher.com/4.1/pusher.min.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+</head>
+
+<body>
+    hello word!
+    <script>
+        document.addEventListener('deviceready', () => {
+
+            // Enable pusher logging - don't include this in production
+            Pusher.logToConsole = true;
+
+            var pusher = new Pusher('<pusher_api_key>', {
+                cluster: 'eu',
+                encrypted: true
+            });
+
+            var channel = pusher.subscribe('my-channel');
+            channel.bind('my-event', function (data) {
+                cordova.plugins.notification.local.schedule({
+                    title: data.title,
+                    text: data.text,
+                    foreground: true
+                });
+            });
+
+
+            cordova.plugins.notification.local.schedule({
+                title: 'My first notification',
+                text: 'Thats pretty easy...',
+                foreground: true
+            });
+            setTimeout(() => {
+                cordova.plugins.notification.local.schedule([
+                    { id: 1, title: 'My second notification', foreground: true },
+                ]);
+            }, 10000);
+            setTimeout(() => {
+                cordova.plugins.notification.local.schedule([
+                    { id: 1, title: 'My third notification', foreground: true },
+                ]);
+            }, 20000);
+        });
+    </script>
+</body>
+
+</html>
