@@ -14,6 +14,12 @@ example on how to convert a simple website to a mobile cordova app
 
 - `npm install`
 
+- `npx cordova platform add android ios browser`
+
+- `npx cordova prepare`
+
+- `npm run generate-cordova-icon`
+
 - Configure `build.json` file starting from `build.sample.json`
 
   `cp build.sample.json build.json`

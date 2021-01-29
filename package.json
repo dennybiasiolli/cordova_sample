@@ -14,35 +14,26 @@
     "dist-android": "cordova build android --release",
     "dist-ios": "cordova build android --release && npm run open-xcode",
     "fix-cordova-icons-android-path": "cp -r platforms/android/res platforms/android/app/src/main && rm -rf platforms/android/res",
-    "generate-cordova-icon": "cordova-icon --icon=icons/icon.png && npm run fix-cordova-icons-android-path",
+    "generate-cordova-icon": "cordova-icon --icon=icons/icon.png",
     "open-android-studio": "open -a /Applications/Android\\ Studio.app platforms/android/",
     "open-xcode": "open platforms/ios/HelloCordova.xcworkspace",
-    "postinstall": "cordova prepare && npm run generate-cordova-icon",
     "start": "cordova run browser",
     "start-android": "cordova run android",
     "start-ios": "cordova run ios"
   },
   "devDependencies": {
-    "cordova": "^8.0.0",
-    "cordova-icon": "^0.11.0"
+    "cordova": "^10.0.0",
+    "cordova-android": "^9.0.0",
+    "cordova-browser": "^6.0.0",
+    "cordova-icon": "^1.0.0",
+    "cordova-ios": "^6.1.1",
+    "cordova-plugin-whitelist": "^1.3.4"
   },
   "dependencies": {
-    "cordova-android": "^7.0.0",
-    "cordova-browser": "^5.0.3",
-    "cordova-ios": "^4.5.4",
-    "cordova-plugin-customurlscheme": "https://github.com/EddyVerbruggen/Custom-URL-scheme.git",
-    "cordova-plugin-whitelist": "^1.3.3"
+    "ios-deploy": "^1.9.2"
   },
   "cordova": {
-    "plugins": {
-      "cordova-plugin-whitelist": {},
-      "cordova-plugin-customurlscheme": {
-        "URL_SCHEME": "mycoolapp",
-        "ANDROID_SCHEME": "http",
-        "ANDROID_HOST": "app.mycoolapp.com",
-        "ANDROID_PATHPREFIX": "/"
-      }
-    },
+    "plugins": {},
     "platforms": [
       "android",
       "ios",
